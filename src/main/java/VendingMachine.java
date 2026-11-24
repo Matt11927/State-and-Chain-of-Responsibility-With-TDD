@@ -11,7 +11,7 @@ public class VendingMachine {
 
     public void dispenseSnack() { state = new IdleState(); }
 
-    public void dispenseSnack(Snack snack) {
+    public void dispenseSnack( Snack snack ) {
         snack.decreaseQuantity();
         state = new IdleState();
     }

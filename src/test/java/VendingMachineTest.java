@@ -67,5 +67,18 @@ public class VendingMachineTest {
         assertEquals( expected , actual );
     }
 
+    @Test
+    void outOfStockSnackCannotBeDispensed() {
+        Snack snickers = new Snack( "Snickers" ,  1.00 , 0 );
+        VendingMachine vendingMachine = new VendingMachine();
+
+        vendingMachine.dispenseSnack( snickers );
+
+        int expected = 0;
+        int actual = snickers.getQuantity();
+
+        assertEquals( expected , actual );
+    }
+
 
 }
