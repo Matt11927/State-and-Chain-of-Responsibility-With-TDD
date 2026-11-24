@@ -34,7 +34,7 @@ public class VendingMachineTest {
         VendingMachine vendingMachine = new VendingMachine();
 
         vendingMachine.selectSnack( "Coke" );
-        vendingMachine.insertMoney( 2.75 );
+        vendingMachine.insertMoney( 3 );
 
         String expected = "DispensingState";
         String actual = vendingMachine.getState().getClass().getSimpleName();
@@ -47,7 +47,7 @@ public class VendingMachineTest {
         VendingMachine vendingMachine = new VendingMachine();
 
         vendingMachine.selectSnack( "Coke" );
-        vendingMachine.insertMoney( 2.75 );
+        vendingMachine.insertMoney( 3 );
         vendingMachine.dispenseSnack();
 
         String expected = "IdleState";
