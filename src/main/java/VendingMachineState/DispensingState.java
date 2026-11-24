@@ -1,4 +1,4 @@
 package VendingMachineState;
 
-public class DispensingState {
+public class DispensingState implements StateOfVendingMachine {
 }

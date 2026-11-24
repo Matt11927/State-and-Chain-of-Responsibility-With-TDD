@@ -1,4 +1,4 @@
 package VendingMachineState;
 
-public class IdleState implements StateOfVendingMachine{
+public class IdleState implements StateOfVendingMachine {
 }
