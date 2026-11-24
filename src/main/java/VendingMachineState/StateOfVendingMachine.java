@@ -1,4 +1,4 @@
 package VendingMachineState;
 
-public class StateOfVendingMachine {
+public interface StateOfVendingMachine {
 }
