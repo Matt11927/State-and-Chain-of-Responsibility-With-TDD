@@ -9,5 +9,7 @@ public class VendingMachine {
 
     public void insertMoney( double amount ) { state = new DispensingState(); }
 
+    public void dispenseSnack(){ state = new IdleState(); }
+
     public StateOfVendingMachine getState() { return state; }
 }
