@@ -123,6 +123,21 @@ public class VendingMachineTest {
         assertEquals( expected , actual );
     }
 
+    @Test
+    void snickersQuantityReachesZero() {
+        Snack snickers = new Snack( "Snickers" , 1.00 , 2 );
+
+        SnackDispenseHandler chain = new SnickersHandler( null );
+
+        chain.dispenseSnack( snickers );
+        chain.dispenseSnack( snickers );
+
+        int expected = 0;
+        int actual = snickers.getQuantity();
+
+        assertEquals( expected , actual );
+    }
+
 
 
 }
