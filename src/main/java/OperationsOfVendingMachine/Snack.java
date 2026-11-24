@@ -1,3 +1,5 @@
+package OperationsOfVendingMachine;
+
 public class Snack {
 
     private String name;
@@ -16,4 +18,6 @@ public class Snack {
        if( quantity > 0 )
         quantity--;
     }
+
+    public Object getName() { return name; }
 }

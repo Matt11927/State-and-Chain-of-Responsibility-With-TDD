@@ -1,6 +1,8 @@
+import OperationsOfVendingMachine.Snack;
+import OperationsOfVendingMachine.VendingMachine;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import VendingMachineState.*;
+
 import HandleDispensingSnacks.*;
 
 public class VendingMachineTest {
@@ -82,16 +84,17 @@ public class VendingMachineTest {
 
     @Test
     void cokeHandlerDispensesCoke() {
-        Snack snack = new Snack( "Coke" ,  2.75 , 5 );
+        Snack coke = new Snack( "Coke", 2.75 , 5 );
         SnackDispenseHandler chain = new CokeHandler( null );
 
-        chain.dispenseSnack( "Coke" );
+        chain.dispenseSnack(coke);
 
-        String expected = "Coke";
-        String actual = snack.getName();
+        int expected = 4;
+        int actual = coke.getQuantity();
 
         assertEquals( expected , actual );
     }
+
 
 
 }

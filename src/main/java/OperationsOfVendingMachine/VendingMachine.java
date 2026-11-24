@@ -1,3 +1,4 @@
+package OperationsOfVendingMachine;
 import VendingMachineState.*;
 
 public class VendingMachine {
