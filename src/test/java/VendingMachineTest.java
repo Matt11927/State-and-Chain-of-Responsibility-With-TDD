@@ -164,6 +164,19 @@ public class VendingMachineTest {
         assertEquals( expected , actual );
     }
 
+    @Test
+    void sufficientFundsMoveToDispensingState() {
+        VendingMachine vendingMachine = new VendingMachine();
+
+        vendingMachine.selectSnack( "Coke" );
+        vendingMachine.insertMoney( 3.00 );
+
+        String expected = "DispensingState";
+        String actual = vendingMachine.getState().getClass().getSimpleName();
+
+        assertEquals( expected , actual );
+    }
+
 
 
 }
