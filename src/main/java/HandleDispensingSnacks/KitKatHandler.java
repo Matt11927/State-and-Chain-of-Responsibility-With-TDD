@@ -7,7 +7,7 @@ public class KitKatHandler extends SnackDispenseHandler {
     public KitKatHandler( SnackDispenseHandler next ) { super( next ); }
 
     public void dispenseSnack( Snack snack ) {
-        if ( snack.getName().equals( "Kit Kat" ) ) {
+        if ( snack.getName().equals( "KitKat" ) ) {
             snack.decreaseQuantity();
         } else {
             super.dispenseSnack( snack );
