@@ -95,6 +95,19 @@ public class VendingMachineTest {
         assertEquals( expected , actual );
     }
 
+    @Test
+    void requestPassesToNextHandler() {
+        Snack pepsi = new Snack( "Pepsi" , 2.75 , 5 );
+        SnackDispenseHandler chain = new CokeHandler( new PepsiHandler( null ) );
+
+        chain.dispenseSnack( pepsi );
+
+        int expected = 4;
+        int actual = pepsi.getQuantity();
+
+        assertEquals( expected , actual );
+    }
+
 
 
 }
