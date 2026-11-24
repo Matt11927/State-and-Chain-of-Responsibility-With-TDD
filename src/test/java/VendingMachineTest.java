@@ -80,5 +80,18 @@ public class VendingMachineTest {
         assertEquals( expected , actual );
     }
 
+    @Test
+    void cokeHandlerDispensesCoke() {
+        Snack snack = new Snack( "Coke" ,  2.75 , 5 );
+        SnackDispenseHandler chain = new CokeHandler( null );
+
+        chain.dispenseSnack( "Coke" );
+
+        String expected = "Coke";
+        String actual = snack.getName();
+
+        assertEquals( expected , actual );
+    }
+
 
 }
